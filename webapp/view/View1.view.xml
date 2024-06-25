@@ -1,0 +1,39 @@
+<mvc:View controllerName="com.sap.kt.exfra.exfragment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+              <Button text="Add Data" press="onPress" />
+              <Table id="idStudentTable" alternateRowColors="false" mode="Delete" delete="onPressDelete" items="{path:'studentmodel>/'}" >
+		            <columns >
+			            <Column  >
+			            	<Text text="SNo" />
+			            </Column>
+			            <Column>
+			            	<Text text="TypeOfDegree" />
+			            </Column>
+			            <Column>
+			            	<Text text="Branch" />
+			            </Column>
+			            <Column >
+			            	<Text text="PassOutyear" />
+			            </Column>
+			            <Column>
+			            	<Text text="Percentage/CGPA" />
+			            </Column>
+		            </columns>
+                    <items>
+                        <ColumnListItem id="colId"  class="cell" press="">
+                            <cells class="fun">
+                               <Text text="{studentmodel>SNo}"  />
+                               <Text text="{studentmodel>TypeOfDegree}"  />
+                               <Text text="{studentmodel>Branch}"  />
+                               <Text text="{studentmodel>PassOutYear}"  />
+                               <Text text="{studentmodel>Percentage_CGPA}"  />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                  </Table>  
+        </content>
+    </Page>
+</mvc:View>
